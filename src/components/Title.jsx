@@ -2,6 +2,8 @@ import '../index.css'
 
 export default function Title() {
     return (
-        <div></div>
+        <div className="title">
+
+        </div>
     )
 }
