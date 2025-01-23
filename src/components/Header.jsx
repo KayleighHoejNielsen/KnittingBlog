@@ -1,6 +1,8 @@
 import '../index.css'
 
-function Header() {
+import yarnLogo from './images/yarnLogo.png'
+
+export default function Header() {
     return (
         <div></div>
     )
