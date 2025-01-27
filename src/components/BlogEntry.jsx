@@ -1,9 +1,12 @@
-import '../index.css'
+import './index.css'
 
 export default function BlogEntry(props) {
     return (
-        <div className="blog-entry">
-            add in the propped info from the instance of blogentry in the app and the html to make it look good also goes here
-        </div>
+        <article className="blog-entry">
+            <img className="blog-image" src={props.img.src} alt={props.img.alt}></img>
+            <h2 className="blog-title">{props.title}</h2>
+            <p className="blog-date">{props.date}</p>
+            <p classname="blog-sample">{props.text}</p>
+        </article>
     )
 }

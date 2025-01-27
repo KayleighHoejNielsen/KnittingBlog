@@ -13,7 +13,7 @@ import greenSweater from './images/greenSweater.jpg'
 import purpleSweater from './images/purpleSweater.jpg'
 import halloweenSweater from './images/hallowenSweater.jpg'
 
-function App() {
+export default function App() {
   return (
     <>
       <Header />
@@ -89,4 +89,4 @@ function App() {
   )
 }
 
-export default App
+
