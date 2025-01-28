@@ -1,4 +1,4 @@
-import './index.css'
+import '../index.css'
 
 import yarnLogo from '../images/yarnLogo.png'
 

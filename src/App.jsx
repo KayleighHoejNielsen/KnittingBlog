@@ -1,17 +1,14 @@
-import './App.css'
+import Header from './components/Header.jsx'
+import Title from './components/Title.jsx'
+import Footer from './components/Footer.jsx'
+import BlogEntry from './components/BlogEntry.jsx'
 
-import Header from './components/Header'
-import Title from './components/Title'
-import Main from './components/Main'
-import Footer from './components/Footer'
-import BlogEntry from './components/BlogEntry'
-
-import blueScarf from './images/blueScarf.jpg'
+import blueScarf from  './images/blueScarf.jpg'
 import halloweenScarf from './images/halloweenScarf.jpg'
 import sleevelessTop from './images/sleevelessTop.jpg'
 import greenSweater from './images/greenSweater.jpg'
 import purpleSweater from './images/purpleSweater.jpg'
-import halloweenSweater from './images/hallowenSweater.jpg'
+import halloweenSweater from './images/halloweenSweater.jpg'
 
 export default function App() {
   return (
