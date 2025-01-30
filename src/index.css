@@ -41,6 +41,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 500px;
   font-size: 4rem;
   background-image: url('./images/banner.png');
 }
