@@ -1,10 +1,10 @@
 import './index.css'
 
-import Header from './components/Header.jsx'
-import Title from './components/Title.jsx'
-import Footer from './components/Footer.jsx'
-import BlogEntry from './components/BlogEntry.jsx'
-import data from './data.js'
+import Header from '../components/Header.jsx'
+import Title from '../components/Title.jsx'
+import Footer from '../components/Footer.jsx'
+import BlogEntry from '../components/BlogEntry.jsx'
+import data from '../data.js'
 
 export default function Home() {
     const blogEntryElements = data.map((entry) => {

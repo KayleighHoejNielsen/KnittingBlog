@@ -17,7 +17,8 @@ export default function RowCounter() {
     function reset() {
         setCounter(0)
     }
-
+    //future functionality: I want to add a delete button and a create button
+    //delete to delete the counter away and create to create a whole new counter - with a title?
     return (
         <>
             <h1>hey this is the counter page</h1>

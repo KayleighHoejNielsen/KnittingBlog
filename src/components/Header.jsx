@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 
 import yarnLogo from '../images/yarnLogo.png'
 
+//future functionality, I want to add a search option. To search for maybe free text titles of blogs
+//and or to search for the type of item that is made in the blog
 export default function Header() {
     return (
         <nav className="nav-bar">
@@ -12,7 +14,7 @@ export default function Header() {
                     <Link to="/">Home</Link>
                 </li>
                 <li>
-                    <Link to="/Counter">Counter</Link>
+                    <Link to="/counter">Counter</Link>
                 </li>
                 <li>
                     <a>Log In</a>
