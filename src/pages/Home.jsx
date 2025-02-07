@@ -1,8 +1,5 @@
 import '../index.css'
 
-import Header from '../components/Header.jsx'
-import Title from '../components/Title.jsx'
-import Footer from '../components/Footer.jsx'
 import BlogEntry from '../components/BlogEntry.jsx'
 import data from '../data.js'
 
@@ -22,12 +19,9 @@ export default function Home() {
     
       return (
         <>
-          <Header />
-          <Title />
           <main className="main-content">
             {blogEntryElements}
           </main>
-          <Footer />
         </>
       )
 }
