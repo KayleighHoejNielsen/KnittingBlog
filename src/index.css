@@ -60,7 +60,7 @@ h1 {
   background-image: url('./images/banner.png');
 }
 
-.main-content {
+.blog-tile {
   display: flex;
 }
 
