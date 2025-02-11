@@ -22,9 +22,14 @@ nav {
   font-size: 2rem;
 }
 
-nav > a {
+a {
   color: inherit;
   text-decoration: none;
+}
+
+a:hover {
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 nav > img {
@@ -93,6 +98,38 @@ h1 {
 
 .blog-sample {
   color: #3b3b3b;
+}
+
+.counter {
+  border: solid;
+  border-color: #C8A2C8;
+  border-radius: 25px;
+  background-color: #C8A2C8;
+  margin: 70px;
+  width: 450px;
+}
+
+.current-count {
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 16px;
+  font-size: 6rem;
+}
+
+button {
+  background-color: #D3D3D3;
+  border: none;
+  color: #333;
+  width: 93px;
+  height: 70px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 6px;
+  cursor: pointer;
+  border-radius: 16px;
+  font-size: larger;
+  font-weight: bold;
 }
 
 footer {

@@ -21,12 +21,12 @@ export default function RowCounter() {
     //delete to delete the counter away and create to create a whole new counter - with a title?
     return (
         <>
-            <h1>hey this is the counter page</h1>
             <div className="counter">
                 <h2 className="current-count">{counter}</h2>
                 <button className="add" onClick={add}>+</button>
                 <button ClassName="subtract" onClick={subtract}>-</button>
-                <button ClassName="reset" onClick={reset}>-</button>
+                <button ClassName="reset" onClick={reset}>Reset</button>
+                <button ClassName="delete" >Delete</button>
             </div>
         </>
     )

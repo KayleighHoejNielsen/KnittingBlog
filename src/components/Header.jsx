@@ -1,20 +1,25 @@
 import '../index.css'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 import yarnLogo from '../images/yarnLogo.png'
 
 //future functionality, I want to add a search option. To search for maybe free text titles of blogs
 //and or to search for the type of item that is made in the blog
 export default function Header() {
+    const activeStyle = {
+        fontWeight: "bold",
+        textDecoration: "underline"
+    }
+
     return (
         <nav className="nav-bar">
             <img src={yarnLogo} alt="logo of a ball of yarn"></img>
             <ul>
                 <li>
-                    <Link to="/">Home</Link>
+                    <NavLink to="/" style={({isActive}) => isActive? activeStyle : null}>Home</NavLink>
                 </li>
                 <li>
-                    <Link to="/counter">Counter</Link>
+                    <NavLink to="/counter" style={({isActive}) => isActive? activeStyle : null}>Counter</NavLink>
                 </li>
                 <li>
                     <a>Log In</a>
