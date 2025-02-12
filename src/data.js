@@ -12,7 +12,7 @@ export default [
             src: blueScarf,
             alt: "blue unfinished scarf"
         },
-        title: "Recreating an anime Scarf",
+        title: "Recreating an Anime Scarf",
         date: "20th January 2025",
         type: "Scarf",
         text: "This is my attempt at recreating a scarf from an anime that I have really enjoyed: The Dangers of the Heart. From the design on the show this was definitely meant to be made with woven fabric, but I am still going to knit it anyways. I had to try…"
@@ -34,7 +34,7 @@ export default [
             src: sleevelessTop,
             alt: "un finished sleeveless top"
         },
-        title: "Recreating a top in my Wardrobe",
+        title: "Recreating a Top in my Wardrobe",
         date: "30th December 2024",
         type: "Sweater",
         text: "You ever have the most perfect top sitting in your wardrobe and have a fear that one day something will happen to it and suddenly it will be gone? Well, I have a top like that and its a knit that I bought from a store, so I decided to…"
