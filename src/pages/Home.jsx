@@ -20,10 +20,10 @@ export default function Home() {
       })
     
       return (
-        <>
+        <div className="main-content">
           <main className="blog-tile">
               {blogEntryElements}
           </main>
-        </>
+        </div>
       )
 }

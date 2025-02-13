@@ -14,7 +14,6 @@ export default function BlogArticle() {
     return (
         <>
             <div className="blog-article">
-                <h1 className="blog-title">{blog.title}</h1>
                 <h2 className="blog-date">{blog.date}</h2>
                 <div className="type-decoration">
                     <h3 className="blog-type">{blog.type}</h3>
