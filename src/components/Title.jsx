@@ -1,9 +1,10 @@
-import '../index.css'
+
 import data from '../data.js'
 import { useLocation, useParams } from 'react-router-dom'
 
 export default function Title() {
     const location = useLocation()
+    const { id } = useParams()
     
     function determineTitle() {
         if (location.pathname === "/counter") {
@@ -11,7 +12,6 @@ export default function Title() {
         } else if (location.pathname === "/") {
             return "Kay's Knitting"
         } else {
-            const { id } = useParams()
             const blog = data.find((item) => item.id.toString() === id)
 
             if (!blog) {

@@ -1,4 +1,3 @@
-import '../index.css'
 import { Link } from 'react-router-dom'
 import BlogEntry from '../components/BlogEntry.jsx'
 import data from '../data.js'

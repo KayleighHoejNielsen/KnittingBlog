@@ -15,13 +15,13 @@ export default function BlogArticle() {
         <>
             <div className="blog-article">
                 <h2 className="blog-date">{blog.date}</h2>
-                <div className="type-decoration">
+                <div className="blog-type-decoration">
                     <h3 className="blog-type">{blog.type}</h3>
                 </div>
                 <img className="blog-image" src={blog.img.src} alt={blog.img.alt}></img>
                 <article className="blog-text">{blog.text}</article>
             </div>
-            <Link to="/">Back to Main</Link>
+            <Link to="/" className="blog-back">Back to Main</Link>
         </>
     )
 }

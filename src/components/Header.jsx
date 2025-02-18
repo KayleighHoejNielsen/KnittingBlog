@@ -1,4 +1,3 @@
-import '../index.css'
 import { NavLink } from 'react-router-dom'
 
 import yarnLogo from '../images/yarnLogo.png'

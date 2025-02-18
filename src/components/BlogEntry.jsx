@@ -1,5 +1,3 @@
-import '../index.css'
-
 export default function BlogEntry(props) {
     return (
         <article className="blog-tile-entry">
