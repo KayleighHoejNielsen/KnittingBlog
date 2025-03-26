@@ -8,6 +8,7 @@ import halloweenSweater from './images/halloweenSweater.jpg'
 export default [
     {
         id: 1,
+        slug: "recreating-an-anime-scarf",
         img: {
             src: blueScarf,
             alt: "blue unfinished scarf"
@@ -19,6 +20,7 @@ export default [
     },
     {
         id: 2,
+        slug:"halloween-scarf-progress",
         img: {
             src: halloweenScarf,
             alt: "scarf with a halloween cat design"
@@ -30,6 +32,7 @@ export default [
     },
     {
         id: 3,
+        slug: "recreating-a-top-in-my-wardrobe",
         img: {
             src: sleevelessTop,
             alt: "un finished sleeveless top"
@@ -41,6 +44,7 @@ export default [
     },
     {
         id: 4,
+        slug: "the-perfect-winter-sweater",
         img: {
             src: greenSweater,
             alt: "green sweater with lace"
@@ -52,6 +56,7 @@ export default [
     },
     {
         id: 5,
+        slug: "purple-dream",
         img: {
             src: purpleSweater,
             alt: "bright purple sweater"
@@ -63,6 +68,7 @@ export default [
     },
     {
         id: 6,
+        slug: "the-halloween-sweater",
         img: {
             src: halloweenSweater,
             alt: "halloween design sweater"

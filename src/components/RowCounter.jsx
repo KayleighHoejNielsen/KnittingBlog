@@ -3,9 +3,10 @@ import { useState } from 'react'
 
 export default function RowCounter() {
     const [counter, setCounter] = useState(0)
+    const [visibility, setVisibility] = useState(true)
 
     function add() {
-        //mental note to self, ++ should not be used in react. do not write over when it comes to states just tell it what the new state is
+        //note to self, ++ should not be used in react. do not write over when it comes to states just tell it what the new state is
         setCounter(prevCounter=> prevCounter + 1)
     }
 
@@ -16,6 +17,10 @@ export default function RowCounter() {
     function reset() {
         setCounter(0)
     }
+
+    function deleteCounter() {
+        setVisibility(false)
+    }
     //future functionality: I want to add a delete button and a create button
     //delete to delete the counter away and create to create a whole new counter - with a title?
     return (
@@ -25,7 +30,7 @@ export default function RowCounter() {
                 <button className="add" onClick={add}>+</button>
                 <button ClassName="subtract" onClick={subtract}>-</button>
                 <button ClassName="reset" onClick={reset}>Reset</button>
-                <button ClassName="delete" >Delete</button>
+                <button ClassName="delete" onClick={deleteCounter} >Delete</button>
             </div>
         </>
     )

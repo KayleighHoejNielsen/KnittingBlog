@@ -1,0 +1,52 @@
+{
+    "posts": {
+        "recreating-an-anime-scarf": {
+            "id": "1",
+            "slug": "recreating-an-anime-scarf",
+            "title": "Recreating an Anime Scarf",
+            "date": "20th January 2025",
+            "type": "Scarf",
+            "text": "<p>This is my attempt at recreating a scarf from an anime that I have really enjoyed: The Dangers of the Heart. From the design on the show this was definitely meant to be made with woven fabric, but I am still going to knit it anyways. I intended to test out a bunch of different methods on how to create these troublesome vertical lines, but in the end I liked the first method I used that I didn't bother testing anything else! I went straight into production as it were.</p>"
+        },
+        "halloween-scarf-progress": {
+            "id": "2",
+            "slug": "halloween-scarf-progress",
+            "title": "Halloween Scarf Progress",
+            "date": "1st January 2025",
+            "type": "Scarf",
+            "text": "<p>I am trying a whole new technique here! This Halloween cat scarf design is done using double knitting. This is where you are knitting the front and the back simultaneously each row, giving the effect that the colours are reversable while keeping the fabric flat. There are quite a few plus sides to knitting a colourwork scarf like this, firstly the fabric stays flat with no curling, meaning that you do not need to knit a tube. Secondly there are no long floats, in fact, there are no floats at all! And thirdly, as the fabric is essentially two layers it is thicker and warmer.</p>"
+        },
+        "recreating-a-top-in-my-wardrobe": {
+            "id": "3",
+            "slug": "recreating-a-top-in-my-wardrobe",
+            "title": "Recreating a Top in my Wardrobe",
+            "date": "30th December 2024",
+            "type": "Sweater",
+            "text": "<p>You ever have the most perfect top sitting in your wardrobe and have a fear that one day something will happen to it and suddenly it will be gone? Well, I have a top like that and its a knit that I bought from a store, so I decided to see if I could recreate it using some of my stash yarn. I am hoping that if I am successful I have a good template for a beautiful summer top and a good way to stash bust some of the pesky single sock skeins I have lying about.</p>"
+        },
+        "the-perfect-winter-sweater": {
+            "id": "4",
+            "slug": "the-perfect-winter-sweater",
+            "title": "The Perfect Winter Sweater",
+            "date": "1st December 2024",
+            "type": "Sweater",
+            "text": "<p>I have loved this design for a long time, but even I was surprised with how nicely this sweater turned out. As usual I made a couple of changes to make it suit me, but the final product is gorgeous, and I have worn it a few times happily. I knit the body incredibly long, I am a biiiiig fan of a long torso on a sweater. I have a bit of a belly on me and I really hate having shorter sweaters that just don't cover what I want them to cover. In the past I would have just knitted them anyways, but I am learning that I simply never wear those sweaters. So longer is definitely better for me.</p>"
+        },
+        "purple-dream": {
+            "id": "5",
+            "slug": "purple-dream",
+            "title": "Purple Dream",
+            "date": "25th November 2024",
+            "type": "Sweater",
+            "text": "<p>The yarn for this sweater is utterly dreamy. Still not sure whether the design is doing it full justice, but the reason I got this yarn was simply because of that insanely saturated beautiful purple colour. I definitely paid for that in the soaking once I had finished as it decided to bleed all over the place. I honestly don't think I ever got the soaking water clear. Oh well. Let's hope I never end up wearing this one out in the rain!!</p>"
+        },     
+        "the-halloween-sweater": {
+            "id": "6",
+            "slug": "the-halloween-sweater",
+            "title": "THE Halloween Sweater",
+            "date": "31st October 2024",
+            "type": "Sweater",
+            "text": "<p>I am a big Halloween fan, so it only makes sense to make this. I went for a pattern for a raglan sweater because I really dont think that yoked sweaters suit me just for the sake of colour work. I definitely regret not getting glow in the dark yarn because that would have taken this sweater up to the next level even. I did have a few problems with the construction of the sweater and I think perhaps it is just how I like my sweaters to fit on my body, but the shape on this one does not really suit me at all. Luckily I only intend to wear it a couple of times a year.</p>"
+        }
+    }
+}

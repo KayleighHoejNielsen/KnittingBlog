@@ -4,8 +4,8 @@ import { useParams, Link } from 'react-router-dom'
 export default function BlogArticle() {
     //note to self: this is not taking the id from the data.js file. But it is taking whatever comes 
     //after the : in my route path. 
-    const { id } = useParams()
-    const blog = data.find((item) => item.id.toString() === id)
+    const { slug } = useParams()
+    const blog = data.find((item) => item.id.toString() === slug)
 
     if (!blog) {
             return <h2>post not found</h2>

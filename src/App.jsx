@@ -12,7 +12,7 @@ export default function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/counter" element={<Counter />} />
-          <Route path="/blog/:id" element={<BlogArticle />} />
+          <Route path="/blog/:slug" element={<BlogArticle />} />
         </Route>
       </Routes> 
     </BrowserRouter>
