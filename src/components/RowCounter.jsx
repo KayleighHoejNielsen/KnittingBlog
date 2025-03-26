@@ -18,9 +18,9 @@ export default function RowCounter() {
         setCounter(0)
     }
 
-    function deleteCounter() {
-        setVisibility(false)
-    }
+    //function deleteCounter() {
+    //    setVisibility(false)
+    //}
     //future functionality: I want to add a delete button and a create button
     //delete to delete the counter away and create to create a whole new counter - with a title?
     return (
