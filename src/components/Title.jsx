@@ -11,8 +11,6 @@ export default function Title() {
             return "Row Counter"
         } else if (location.pathname === "/") {
             return "Kay's Knitting"
-        } else if (location.pathname === "/create") {
-            return "Create a Blog Article"
         } else {
             const blog = data.find((item) => item.id.toString() === id)
 
