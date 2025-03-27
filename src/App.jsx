@@ -4,7 +4,6 @@ import Home from './pages/Home.jsx'
 import Counter from './pages/Counter.jsx'
 import Layout from './components/Layout.jsx'
 import BlogArticle from './pages/BlogArticle.jsx'
-import Create from './pages/Create.jsx'
 
 export default function App() {
   return (
@@ -14,7 +13,6 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/counter" element={<Counter />} />
           <Route path="/blog/:slug" element={<BlogArticle />} />
-          <Route path="/create" element={<Create />} />
         </Route>
       </Routes> 
     </BrowserRouter>
