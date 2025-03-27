@@ -21,7 +21,7 @@ export default function Header() {
                     <NavLink to="/counter" style={({isActive}) => isActive? activeStyle : null}>Counter</NavLink>
                 </li>
                 <li>
-                    <a>Log In</a>
+                    <NavLink to="/create" style={({isActive}) => isActive? activeStyle : null}>Create</NavLink>
                 </li>
             </ul>
         </nav>
