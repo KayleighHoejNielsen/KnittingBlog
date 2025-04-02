@@ -3,12 +3,12 @@ import { getFirestore } from "firebase/firestore"
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDEP1T2W4o_OgrcU4dsy0999V6H5gVLaTk",
-    authDomain: "kays-knitting-blog2.firebaseapp.com",
-    projectId: "kays-knitting-blog2",
-    storageBucket: "kays-knitting-blog2.firebasestorage.app",
-    messagingSenderId: "418549159072",
-    appId: "1:418549159072:web:520dc9bb9856354323a5c5"
+    apiKey: "AIzaSyC_6RA9kq5Q48nbnAAIWEZfUtWe3DyDzUc",
+    authDomain: "kays-knitting-blog3.firebaseapp.com",
+    projectId: "kays-knitting-blog3",
+    storageBucket: "kays-knitting-blog3.firebasestorage.app",
+    messagingSenderId: "611891877489",
+    appId: "1:611891877489:web:24690fdf6e32fd18886dd0"
 }
 
 const app = initializeApp(firebaseConfig)
