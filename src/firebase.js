@@ -1,30 +1,17 @@
-//old firebase initialization import?
-//import firebase from "firebase/app"
 import { initializeApp  } from "firebase/app"
+import { getFirestore } from "firebase/firestore"
 
-const config = {
-    apiKey: "AIzaSyA3ep3hm4IchiW6vea_TLfK9nRihGQfIdg",
-    authDomain: "kays-knitting-blog-4e328.firebaseapp.com",
-    databaseURL: "",
-    projectId: "kays-knitting-blog-4e328",
-    storageBucket: "kays-knitting-blog-4e328.firebasestorage.app",
-    messagingSenderId: "775646649242",
-    appId: "1:775646649242:web:14d6e1403cb586f3593823"
+
+const firebaseConfig = {
+    apiKey: "AIzaSyC_6RA9kq5Q48nbnAAIWEZfUtWe3DyDzUc",
+    authDomain: "kays-knitting-blog3.firebaseapp.com",
+    projectId: "kays-knitting-blog3",
+    storageBucket: "kays-knitting-blog3.firebasestorage.app",
+    messagingSenderId: "611891877489",
+    appId: "1:611891877489:web:24690fdf6e32fd18886dd0"
 }
 
-let firebaseCache
+const app = initializeApp(firebaseConfig)
+const db = getFirestore(app)
 
-export const getFirebase = () => {
-    if (firebaseCache) {
-        return firebaseCache
-    }
-
-    //old initialisation code?
-    //firebase.initializeApp(config)
-    //firebaseCache = firebase
-    //return firebase
-
-    const firebaseApp = initializeApp(config)
-    firebaseCache = firebaseApp
-    return firebaseApp
-}
+export default db
