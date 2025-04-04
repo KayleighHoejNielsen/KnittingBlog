@@ -12,9 +12,9 @@ export default function CreateBlog() {
     const submitBlog = async (e) => {
         e.preventDefault()
         if (!title || !slug || !type || !content || !image) {
-            alert("Please fill in all of the fields and add an image!")
+            return(alert("Please fill in all of the fields and add an image!"))
         }
-        
+
         console.log("submit button clicked")
         const imageUrl = await uploadToCloudinary(image)
         await addBlogPost(title, slug, type, content, imageUrl)
@@ -22,12 +22,28 @@ export default function CreateBlog() {
         setTitle("")
         setSlug("")
         setContent("")
-        setImage(null)
     }
-    // note to self: the "e" used with the onchange is the "event" that is happening when something is changed in the input
-    // so we are setting the state to now be whatever event has been logged in the input
-    //also note to self: specifying the index on the image because it actually brings back an array of images letting you
-    // you have more than one. In this case I only want one at a time, so choosing the first index in the array
+
+    const saveTitle = (event) => {
+        setTitle(event.target.value)
+    }
+    
+    const saveSlug = (event) => {
+        setSlug(event.target.value)
+    }
+    
+    const saveType = (event) => {
+        setType(event.target.value)
+    }
+    
+    const saveContent = (event) => {
+        setContent(event.target.value)
+    }
+    
+    const saveImage = (event) => {
+        setImage(event.target.files[0])
+    }
+
     return(
         <>
             <form className="create-form" onSubmit={submitBlog}> 
@@ -36,20 +52,20 @@ export default function CreateBlog() {
                     id="title" 
                     type="text" 
                     value={title} 
-                    onChange={(e) => setTitle(e.target.value)}
+                    onChange={saveTitle}
                 />
                 <label htmlFor="slug">Slug:</label>
                 <input 
                     id="slug" 
                     type="text" 
                     value={slug} 
-                    onChange={(e) => setSlug(e.target.value)} 
+                    onChange={saveSlug} 
                 />
                 <label htmlFor="type">Type:</label>
                 <select 
                     id="type" 
                     value={type} 
-                    onChange={(e) => setType(e.target.value)}
+                    onChange={saveType}
                 >   
                     <option value="" disabled>Select Type</option>
                     <option value="blanket">Blanket</option>
@@ -64,14 +80,14 @@ export default function CreateBlog() {
                 <input 
                     type="file" 
                     accept="image/*" 
-                    onChange={(e) => setImage(e.target.files[0])}
+                    onChange={saveImage} 
                 />
                 <label htmlFor="content">Content:</label>
                 <textarea 
                     id="content" 
                     name="content" 
                     value={content} 
-                    onChange={(e) => setContent(e.target.value)}
+                    onChange={saveContent}
                 />
                 <button id="create" className="create-button" type="submit">Save</button>
             </form>

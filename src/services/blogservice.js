@@ -15,10 +15,10 @@ export const addBlogPost = async (title, slug, type, content, imageUrl) => {
 export const uploadToCloudinary = async (file) => {
     const formData = new FormData() 
     formData.append("file", file)
-    formData.append("upload_preset", "kays_blog_images") 
+    formData.append("upload_preset", import.meta.env.VITE_CLOUDINARY_UPLOAD_PRESET) 
 
     const response = await fetch(
-        `https://api.cloudinary.com/v1_1/dowsszhar/image/upload`, 
+        import.meta.env.VITE_CLOUDINARY_CLOUD_NAME, 
         {
             method: "POST",
             body: formData
