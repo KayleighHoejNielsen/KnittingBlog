@@ -7,21 +7,23 @@ export default function CreateBlog() {
     const [slug, setSlug] = useState("")
     const [type, setType] = useState("")
     const [content, setContent] = useState("")
+    const [alt, setAlt] = useState("")
     const [image, setImage] = useState(null)
 
     const submitBlog = async (e) => {
         e.preventDefault()
-        if (!title || !slug || !type || !content || !image) {
+        if (!title || !slug || !type || !content || !image || !alt) {
             return(alert("Please fill in all of the fields and add an image!"))
         }
 
         console.log("submit button clicked")
         const imageUrl = await uploadToCloudinary(image)
-        await addBlogPost(title, slug, type, content, imageUrl)
+        await addBlogPost(title, slug, type, content, imageUrl, alt)
         alert("blog post added!") //find something better here to let me know its uploaded --just feedback confirmation.
         setTitle("")
         setSlug("")
         setContent("")
+        setAlt("")
     }
 
     const saveTitle = (event) => {
@@ -42,6 +44,10 @@ export default function CreateBlog() {
     
     const saveImage = (event) => {
         setImage(event.target.files[0])
+    }
+
+    const saveAlt = (event) => {
+        setAlt(event.target.value)
     }
 
     return(
@@ -77,6 +83,13 @@ export default function CreateBlog() {
                     <option value="sock">Sock</option>
                     <option value="sweater">Sweater</option>
                 </select>
+                <label htmlFor="alt">image alt text</label>
+                <input 
+                    id="alt" 
+                    type="text" 
+                    value={alt} 
+                    onChange={saveAlt} 
+                />
                 <input 
                     type="file" 
                     accept="image/*" 

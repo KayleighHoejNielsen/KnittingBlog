@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 
-export default function RowCounter({ id, onDelete }) {
+export default function RowCounter({id, name, onDelete}) {
     const [counter, setCounter] = useState(0)
 
     function add() {
@@ -25,6 +25,7 @@ export default function RowCounter({ id, onDelete }) {
     return (
         <>
             <div className="counter">
+                <h3>{name}</h3>
                 <h2 className="current-count">{counter}</h2>
                 <button className="add" onClick={add}>+</button>
                 <button ClassName="subtract" onClick={subtract}>-</button>

@@ -1,20 +1,35 @@
 import { Link } from 'react-router-dom'
 import BlogEntry from '../components/BlogEntry.jsx'
 import data from '../data.js'
+import { useState, useEffect } from 'react'
+import { getAllBlogPosts } from '../services/blogservice.js'
 
 export default function Home() {
-    const blogEntryElements = data.map((entry) => {
+    const [posts, setPosts] = useState([])
+
+    useEffect(() => {
+      const fetchPosts = async () => {
+        const blogPosts = await getAllBlogPosts()
+        setPosts(blogPosts)
+      }
+
+      fetchPosts()
+    }, [])
+
+    const blogEntryElements = posts.map((post) => {
         return (
-          <Link to={`/blog/${entry.slug}`}>
-            <BlogEntry
+          //<Link to={`/blog/${post.slug}`}>
+          <BlogEntry
               //this has to be separated for ordering etc. and has to be called "key"
-              key={entry.slug}
-              //note to self: now I am passing down the whole entry object I need to match up
-              //whatever things are called in the entry object with the props names in BlogEntry component
-              //i.e. the database you pull from has to have the same field names.
-              entry={entry}
-            />
-          </Link>
+            key={post.id}
+
+            title={post.title}
+            type={post.type}
+            imageUrl={post.imageUrl}
+            content={post.content}
+            createdAt={post.createdAt}
+          />
+          //</Link>
         )
       })
     
