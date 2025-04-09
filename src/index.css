@@ -175,6 +175,7 @@ button {
 .blog-date {
   margin: 20px;
   font-size: 2rem;
+  text-align: left;
 }
 
 .blog-type {
@@ -253,3 +254,6 @@ form > select {
   margin-bottom: 50px;
 }
 
+.alt {
+  margin-bottom: 50px;
+}

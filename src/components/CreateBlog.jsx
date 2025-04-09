@@ -83,9 +83,10 @@ export default function CreateBlog() {
                     <option value="sock">Sock</option>
                     <option value="sweater">Sweater</option>
                 </select>
-                <label htmlFor="alt">image alt text</label>
+                <label htmlFor="alt">Image Alt Text</label>
                 <input 
                     id="alt" 
+                    className="alt"
                     type="text" 
                     value={alt} 
                     onChange={saveAlt} 

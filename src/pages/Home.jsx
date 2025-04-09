@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import BlogEntry from '../components/BlogEntry.jsx'
-import data from '../data.js'
 import { useState, useEffect } from 'react'
 import { getAllBlogPosts } from '../services/blogservice.js'
 
@@ -18,18 +17,19 @@ export default function Home() {
 
     const blogEntryElements = posts.map((post) => {
         return (
-          //<Link to={`/blog/${post.slug}`}>
-          <BlogEntry
+          <Link to={`/blog/${post.slug}`}>
+            <BlogEntry
               //this has to be separated for ordering etc. and has to be called "key"
-            key={post.id}
+              key={post.id}
 
-            title={post.title}
-            type={post.type}
-            imageUrl={post.imageUrl}
-            content={post.content}
-            createdAt={post.createdAt}
-          />
-          //</Link>
+              title={post.title}
+              type={post.type}
+              imageUrl={post.imageUrl}
+              content={post.content}
+              createdAt={post.createdAt}
+              slug={post.slug}
+            />
+          </Link>
         )
       })
     
