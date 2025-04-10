@@ -30,13 +30,13 @@ export const uploadToCloudinary = async (file) => {
 }
 
 export const getAllBlogPosts = async () => {
-    const postsRef = collection (db, "posts")
+    const postsTable = collection(db, "posts")
     //note to self: createdAt is the server timestamp field that is captured when its uploaded to firestore
     //I named the field that, and desc is meaning to order them descending.
-    const q = query(postsRef, orderBy("createdAt", "desc")) 
-    const snapshot = await getDocs(q)
+    const orderedResults = query(postsTable, orderBy("createdAt", "desc")) 
+    const allBlogs = await getDocs(orderedResults)
 
-    const posts = snapshot.docs.map(doc => ({
+    const posts = allBlogs.docs.map(doc => ({
         id: doc.id,
         ...doc.data(),
     }))
