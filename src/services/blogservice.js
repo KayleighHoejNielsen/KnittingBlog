@@ -1,13 +1,15 @@
 import { collection, addDoc, serverTimestamp, getDocs, query, orderBy } from "firebase/firestore"
 import db from "../firebase"
 
-export const addBlogPost = async (title, slug, type, content, imageUrl) => {
+//title, slug, type, content, imageUrl, alt
+export const addBlogPost = async (formData) => {
     await addDoc(collection(db, "posts"), {
-        content: content,
-        slug: slug,
-        title: title,
-        type: type,
-        imageUrl: imageUrl,
+        content: formData.content,
+        slug: formData.slug,
+        title: formData.title,
+        type: formData.type,
+        imageUrl: formData.imageUrl,
+        alt: formData.alt,
         createdAt: serverTimestamp()
     })
 }

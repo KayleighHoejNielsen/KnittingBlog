@@ -2,6 +2,8 @@ import { useParams, Link } from 'react-router-dom'
 import { query, where, getDocs, collection } from 'firebase/firestore'
 import db from '../firebase.js'
 import { useEffect, useState } from 'react'
+import DOMPurify from 'dompurify'
+import { prettyDate } from '../services/functions.js'
 
 export default function BlogArticle() {
     const { slug } = useParams()
@@ -39,24 +41,10 @@ export default function BlogArticle() {
     if (loading) return <p>loading...</p>
     if (!post) return <p>post not found</p>
 
-    const prettyDate = (timestamp) => {
-        if (!timestamp || !timestamp.seconds) return "there is no date"
+    //{post.content}</article>
 
-        const date = new Date(timestamp.seconds * 1000)
-
-        const day = date.getDate()
-        const month = date.toLocaleString("en-GB", {month: "long"})
-        const year = date.getFullYear()
-        
-        //there is definitely some package I could download to do this for me
-        //but I thought it was pretty neat to do it myself and work out how it does it. fun.
-        const getOrdinal = (n) => {
-            const s = ["th", "st", "nd", "rd"]
-            const v = n % 100
-            return s[(v-20) % 10] || s[v] || s[0]
-        }
-        
-        return `${day}${getOrdinal(day)} ${month} ${year}`
+    function renderToHTML(content) {
+        return { __html: DOMPurify.sanitize(content) }
     }
 
     return (
@@ -68,7 +56,7 @@ export default function BlogArticle() {
                 </div>
                 <h2 className="blog-date">{prettyDate(post.createdAt)}</h2>
                 <img className="blog-image" src={post.imageUrl} alt={post.alt}></img>
-                <article className="blog-text">{post.content}</article>
+                <article className="blog-text" dangerouslySetInnerHTML={renderToHTML(post.content)} />
             </div>
             <Link to="/" className="blog-back">Back to Main</Link>
         </>
